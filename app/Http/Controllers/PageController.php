@@ -11,12 +11,12 @@ class PageController extends Controller
 {
     public function index(){
         $timezone = new DateTimeZone("Europe/Rome");
+        $eight = DateTime::createFromFormat("Y-m-d H:i:s", "2026-09-16 8:00:00", $timezone);
         $eleven = DateTime::createFromFormat("Y-m-d H:i:s", "2026-09-16 11:00:00", $timezone);
-        $fourteen = DateTime::createFromFormat("Y-m-d H:i:s", "2026-09-16 14:00:00", $timezone);
 
-        $trains_at_eleven = Train::where('arrival_datetime', '>=', $eleven)->get();
-        $trains_at_fourteen = Train::where('arrival_datetime', ">=", $fourteen)->get();
+        $trains_at_eight = Train::where('departure_datetime', '>=', $eight)->orderBy('departure_datetime')->get();
+        $trains_at_eleven = Train::where('departure_datetime', ">=", $eleven)->orderBy('departure_datetime')->get();
         
-        return view('timetable', compact(['trains_at_eleven', 'trains_at_fourteen']));
+        return view('timetable', compact(['trains_at_eight', 'trains_at_eleven']));
     }
 }

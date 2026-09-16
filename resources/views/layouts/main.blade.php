@@ -11,10 +11,10 @@
 </head>
 <body>
     <main>
-        <h2>Treni in arrivo dalle ore 11</h2>
+        <h2>Treni in partenza dalle 8</h2>
+        @yield('trains_eight')
+        <h2>Treni in partenza dalle 11</h2>
         @yield('trains_eleven')
-        <h2>Treni in arrivo dalle ore 14</h2>
-        @yield('trains_fourteen')
     </main>
 </body>
 </html>
