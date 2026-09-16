@@ -7,7 +7,7 @@
     <td class="train-cell">{{ $arrival_station }}</td>
     <td class="train-cell">{{ $departure_datetime }}</td>
     <td class="train-cell">{{ $arrival_datetime }}</td>
-    <td class="train-cell">{{ $carriages->isNotEmpty() && is_numeric($carriages->toHtml()) ? $carriages : "----" }}</td>
-    <td class="train-cell">{{ $is_on_time->toHtml() == 1 ? "Treno in Ritardo" : "----"}}</td>
-    <td class="train-cell">{{ $is_cancelled->toHtml() == 1 ? "Treno cancellato" : "----" }}</td>
+    <td class="train-cell">{{ is_numeric(trim($carriages)) ? $carriages : "----" }}</td>
+    <td class="train-cell">{{ trim($is_canceled) === '1' ? "----" : (trim($is_on_time) == '1' ? "Treno in orario" : "Treno in ritardo")}}</td>
+    <td class="train-cell">{{ trim($is_canceled) === '1' ? "Treno cancellato" : "----" }}</td>
 </tr>

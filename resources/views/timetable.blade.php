@@ -31,7 +31,7 @@
                 <x-slot:arrival_datetime>{{ $train['arrival_datetime'] }}</x-slot>
                 <x-slot:carriages>{{ $train['carriages'] }}</x-slot>
                 <x-slot:is_on_time>{{ $train['is_on_time'] }}</x-slot>
-                <x-slot:is_cancelled>{{ $train['is_cancelled'] }}</x-slot>
+                <x-slot:is_canceled>{{ $train['is_canceled'] }}</x-slot>
             </x-train-entry>
             @endforeach
         </tbody>
@@ -67,7 +67,7 @@
                 <x-slot:arrival_datetime>{{ $train['arrival_datetime'] }}</x-slot>
                 <x-slot:carriages>{{ $train['carriages'] }}</x-slot>
                 <x-slot:is_on_time>{{ $train['is_on_time'] }}</x-slot>
-                <x-slot:is_cancelled>{{ $train['is_cancelled'] }}</x-slot>
+                <x-slot:is_canceled>{{ $train['is_canceled'] }}</x-slot>
             </x-train-entry>
             @endforeach
         </tbody>
