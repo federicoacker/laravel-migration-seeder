@@ -11,8 +11,8 @@
                 <th class="train-head-cell">Binario di arrivo</th>
                 <th class="train-head-cell">Stazione di partenza</th>
                 <th class="train-head-cell">Stazione di arrivo</th>
-                <th class="train-head-cell">Data e ora di partenza</th>
-                <th class="train-head-cell">Data e ora di arrivo</th>
+                <th class="train-head-cell">Orario di partenza</th>
+                <th class="train-head-cell">Orario di arrivo</th>
                 <th class="train-head-cell">Numero di carrozze</th>
                 <th class="train-head-cell">In orario</th>
                 <th class="train-head-cell">Cancellato</th>

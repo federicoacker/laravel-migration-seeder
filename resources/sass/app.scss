@@ -6,40 +6,57 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
-main{
+
+
+main {
     background-color: #141821;
-    display:flex;
-    min-height:100vh;
-    justify-content:center;
-    align-items:center;
-    color: #7C4902;
-    flex-direction:column;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #ff9602;
+    flex-direction: column;
 }
+
 .train-table {
     font-family: "Share Tech Mono", sans-serif;
     font-weight: 400;
     font-style: normal;
     padding: 2rem 2rem 2rem 2rem;
-    background-color: #080504;
-    border: 1px solid #7B796C;
+    background-color: #383230;
+    border: 1px solid #7C4902;
+    margin: 2rem 0;
 }
-.train-head{
+
+.train-head {
     padding: 2rem 2rem;
-    font-size:1rem;
+    font-size: 1rem;
     border-bottom: 1px solid #7B796C;
 }
-.train-head-cell{
-    color: #7C4902;
+
+.train-head-cell {
+    color: #ff9602;
     padding: 0.5rem 0.5rem;
     text-align: center;
-    border-right: 1px solid #7B796C;
+    border-right: 1px solid #7C4902;
 }
-.train-row{
-    border-bottom: 1px solid #7B796C;
+
+.train-row {
+    border-bottom: 1px solid #7C4902;
+    --cell-color: #{$train-color};
+    --cell-border: 1px solid #7C4902;
+
+    &:nth-child(even) {
+        background-color: #7B796C;
+        --cell-color: #ff9602;
+    }
 }
-.train-cell{
-    color: white;
+
+
+.train-cell {
+    color: var(--cell-color);
+    border-right: 1px solid var(--cell-border);
     padding: 0.5rem 0.5rem;
-    text-align:center;
-    border-right: 1px solid #7B796C;
+    text-align: center;
+    font-size: 1rem;
 }

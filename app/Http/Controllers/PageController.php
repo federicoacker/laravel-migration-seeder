@@ -10,8 +10,7 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function index(){
-        $timezone = new DateTimeZone("Europe/Rome");
-        $today = new DateTime("midnight", $timezone);
+        $today = now('Europe/Rome')->startOfDay();
 
         $trains = Train::where('departure_datetime', '>=', $today)
         ->orderBy('departure_datetime')->get();
