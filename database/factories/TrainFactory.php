@@ -37,8 +37,8 @@ class TrainFactory extends Factory
         return [
             "company" => $company,
             "train_number" => $company == "Trenitalia" ? 
-            $this->faker->numberBetween(0,99999) . strtoupper($this->faker->randomLetter()) : 
-            $this->faker->numberBetween(0,999999) . strtoupper($this->faker->randomLetter()),
+            $this->faker->numberBetween(00001,99999) . strtoupper($this->faker->randomLetter()) : 
+            $this->faker->numberBetween(000001,999999) . strtoupper($this->faker->randomLetter()),
             "platform" => $this->faker->numberBetween(1,20),
             "type" => $company == "Trenitalia" ?
             $trenitaliaTypes[array_rand($trenitaliaTypes, 1)] :
